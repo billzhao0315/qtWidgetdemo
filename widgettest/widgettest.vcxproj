@@ -142,14 +142,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="curve.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
     <ClCompile Include="moc_mainwindow.cpp" />
+    <ClCompile Include="moc_myitem.cpp" />
+    <ClCompile Include="moc_mylineitem.cpp" />
+    <ClCompile Include="moc_qaxis.cpp" />
     <ClCompile Include="myitem.cpp" />
+    <ClCompile Include="mylineitem.cpp" />
+    <ClCompile Include="myqgraphicsview.cpp" />
+    <ClCompile Include="qaxis.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="curve.h" />
     <ClInclude Include="mainwindow.h" />
     <ClInclude Include="myitem.h" />
+    <ClInclude Include="mylineitem.h" />
+    <ClInclude Include="myqgraphicsview.h" />
+    <ClInclude Include="qaxis.h" />
     <ClInclude Include="ui_mainwindow.h" />
   </ItemGroup>
   <ItemGroup>

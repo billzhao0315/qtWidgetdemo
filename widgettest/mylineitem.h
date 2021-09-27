@@ -1,6 +1,9 @@
-#ifndef MYITEM_H
-#define MYITEM_H
+#ifndef MYLINEITEM_H
+#define MYLINEITEM_H
 
+#include <QGraphicsLineItem>
+#include <QObject>
+#include <QPainter>
 #include <QGraphicsSceneDragDropEvent>
 #include <QStyleOptionGraphicsItem>
 #include <QGraphicsSceneDragDropEvent>
@@ -10,39 +13,32 @@
 #include <QDragLeaveEvent>
 #include <QDragEnterEvent>
 #include <QDropEvent>
-#include <QPainter>
 #include <QRectF>
 #include <QPen>
+#include <QGraphicsSceneHoverEvent>
+#include <QFocusEvent>
 
-
-class MyItem :public QObject ,public QGraphicsItem
+class MyLineItem :public QObject , public QGraphicsLineItem
 {
     Q_OBJECT
-    Q_INTERFACES(QGraphicsItem)
+    //Q_INTERFACES(QGraphicsLineItem)
 public:
-    MyItem(double radius, double Radius, int index);
-    ~MyItem();
-    QRectF boundingRect() const;
+    MyLineItem(qreal x1, qreal y1, qreal x2, qreal y2,int index, QGraphicsItem *parent = nullptr);
+    MyLineItem(const QLineF &line, int index,QGraphicsItem *parent = nullptr);
+    MyLineItem(int index, QGraphicsItem *parent = nullptr);
     void paint(QPainter *painter,const QStyleOptionGraphicsItem *option,QWidget *widget);
-    QVariant itemChange(GraphicsItemChange change, const QVariant &value);
     void setIndex(int index);
-    void updateRadius(double radius);
-    signals:
-    void posChanged(int index);
-
-
+signals:
+    void addNodeItem(int index);
 protected:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
     void mouseDoubleClickEvent (QGraphicsSceneMouseEvent *event);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
-
+    void hoverEnterEvent(QGraphicsSceneHoverEvent *event);
+    void focusInEvent(QFocusEvent *event);
 private:
-    double m_radius;
-    double m_Radius;
-
     bool m_colorFlag;//true:red, flase:black
     int m_index;
-
 };
 
-#endif // MYITEM_H
+#endif // MYLINEITEM_H

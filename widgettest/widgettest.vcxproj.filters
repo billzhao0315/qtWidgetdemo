@@ -27,6 +27,27 @@
     <ClCompile Include="moc_mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="curve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mylineitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myqgraphicsview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qaxis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_myitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_mylineitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_qaxis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainwindow.h">
@@ -36,6 +57,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="curve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mylineitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myqgraphicsview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qaxis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
